@@ -1,4 +1,4 @@
 package by.epamtc.jwd.main;
 
-public class Task1 {
+public class Task4 {
 }

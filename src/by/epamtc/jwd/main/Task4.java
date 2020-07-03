@@ -1,7 +1,6 @@
 package by.epamtc.jwd.main;
 
-import java.util.Arrays;
-
+import static by.epamtc.jwd.util.Util.arrayToString;
 import static by.epamtc.jwd.util.Util.getRandomIntArray;
 import static java.util.Arrays.sort;
 
@@ -57,10 +56,11 @@ public class Task4 {
 
     public static void main(String[] args) {
         int size = 10;
-        int[] nums = getRandomIntArray(size);
+        int bound = 5;
+        int[] nums = getRandomIntArray(size, bound);
 
-        System.out.printf("Majority element(without sort) in %s is %d\n", Arrays.toString(nums), getMajorityElement(nums));
-        System.out.printf("Majority element(with sort) in %s is %d\n", Arrays.toString(nums), getMajorityElement1(nums));
+        System.out.printf("Majority element(without sort) in %s is %d\n", arrayToString(nums), getMajorityElement(nums));
+        System.out.printf("Majority element(with sort) in %s is %d\n", arrayToString(nums), getMajorityElement1(nums));
 
     }
 }

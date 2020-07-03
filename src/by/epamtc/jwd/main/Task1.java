@@ -2,8 +2,7 @@ package by.epamtc.jwd.main;
 
 import com.sun.media.sound.InvalidDataException;
 
-import java.util.Arrays;
-
+import static by.epamtc.jwd.util.Util.arrayToString;
 import static by.epamtc.jwd.util.Util.getRandomIntArray;
 
 public class Task1 {
@@ -28,8 +27,9 @@ public class Task1 {
 
     public static void main(String[] args) {
         int size = 10;
-        int[] nums = getRandomIntArray(size);
+        int bound = 5;
+        int[] nums = getRandomIntArray(size, bound);
 
-        System.out.printf("Majority element(without sort) in %s is %d\n", Arrays.toString(nums), findSpecialMax(nums));
+        System.out.printf("Majority element(without sort) in %s is %d\n", arrayToString(nums), findSpecialMax(nums));
     }
 }

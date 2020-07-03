@@ -1,7 +1,6 @@
 package by.epamtc.jwd.main;
 
-import java.util.Arrays;
-
+import static by.epamtc.jwd.util.Util.arrayToString;
 import static by.epamtc.jwd.util.Util.getRandomIntArray;
 
 public class Task5 {
@@ -29,8 +28,9 @@ public class Task5 {
 
     public static void main(String[] args) {
         int size = 10;
-        int[] nums = getRandomIntArray(size);
+        int bound = 5;
+        int[] nums = getRandomIntArray(size,bound);
 
-        System.out.printf("array: %s\neven max + odd min = %d\n", Arrays.toString(nums), solve(nums));
+        System.out.printf("array: %s\neven max + odd min = %d\n", arrayToString(nums), solve(nums));
     }
 }

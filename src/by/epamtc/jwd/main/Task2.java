@@ -1,7 +1,6 @@
 package by.epamtc.jwd.main;
 
-import java.util.Arrays;
-
+import static by.epamtc.jwd.util.Util.arrayToString;
 import static by.epamtc.jwd.util.Util.getRandomIntArray;
 
 public class Task2 {
@@ -31,11 +30,12 @@ public class Task2 {
 
     public static void main(String[] args) {
         int size = 10;
-        int[] nums = getRandomIntArray(size);
+        int bound = 5;
+        int[] nums = getRandomIntArray(size, bound);
 
         int[] result = removeMinElementsFromSequence(nums);
 
-        System.out.println("Initial array: " + Arrays.toString(nums));
-        System.out.println("Result array: " + Arrays.toString(result));
+        System.out.println("Initial array: " + arrayToString(nums));
+        System.out.println("Result array: " + arrayToString(result));
     }
 }
